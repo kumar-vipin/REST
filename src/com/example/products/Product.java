@@ -12,10 +12,12 @@ public class Product {
 	public Product() {
 
 	}
-public String toString(){
-	System.out.println(productId+" "+productName+" "+ price);
-	return productId+" "+productName+" "+ price;
-}
+
+	public String toString() {
+		System.out.println(productId + " " + productName + " " + price);
+		return productId + " " + productName + " " + price;
+	}
+
 	public Product(int productId, String productName, int price) {
 		this.productId = productId;
 		this.productName = productName;

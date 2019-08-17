@@ -44,15 +44,15 @@ public class ProductController {
 	@Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	public void updateProduct(Product product, @QueryParam("productId") int productId) {
 		Product p = productRepo.findProductById(productId);
-		if(product.getPrice() != 0) {
-			p.setPrice(product.getPrice());	
+		if (product.getPrice() != 0) {
+			p.setPrice(product.getPrice());
 		}
-		if(product.getProductName() != null) {
+		if (product.getProductName() != null) {
 			p.setProductName(product.getProductName());
 		}
 		productRepo.saveProduct(p);
 	}
-	
+
 	@DELETE
 	@Path("/{productId}")
 	public void deleteProduct(@PathParam("productId") int productId) {
